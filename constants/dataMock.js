@@ -1,0 +1,67 @@
+export const courses = [
+  {
+    name: "Ciencia y Ambiente",
+    day: "LUNES",
+    anio: "Primer Año",
+    grado: "Primer Grado",
+    schedule: "9:00am - 10:50am",
+    alumnos: [
+      "Julio Zapata",
+      "Fernando Rodriguez",
+      "Camilo Benites",
+      "José Sánchez",
+    ],
+  },
+  {
+    name: "Personal Social",
+    day: "LUNES",
+    anio: "Primer Año",
+    grado: "Primer Grado",
+    schedule: "11:00am - 12:50am",
+    alumnos: [
+      "Julio Zapata",
+      "Fernando Rodriguez",
+      "Camilo Benites",
+      "José Sánchez",
+    ],
+  },
+  {
+    name: "Matemáticas",
+    day: "LUNES",
+    anio: "Primer Año",
+    grado: "Primer Grado",
+    schedule: "2:00pm - 4:00pm",
+    alumnos: [
+      "Julio Zapata",
+      "Fernando Rodriguez",
+      "Camilo Benites",
+      "José Sánchez",
+    ],
+  },
+  {
+    name: "Lógica",
+    day: "JUEVES",
+    anio: "Primer Año",
+    grado: "Primer Grado",
+    schedule: "10:00am - 12:50am",
+    alumnos: [
+      "Julio Zapata",
+      "Fernando Rodriguez",
+      "Camilo Benites",
+      "José Sánchez",
+    ],
+  },
+  {
+    name: "Educación Física",
+    day: "VIERNES",
+    anio: "Primer Año",
+    grado: "Primer Grado",
+    schedule: "10:00am - 12:50am",
+    alumnos: [
+      "Julio Zapata",
+      "Fernando Rodriguez",
+      "Camilo Benites",
+      "José Sánchez",
+    ],
+  },
+];
