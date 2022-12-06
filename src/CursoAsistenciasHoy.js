@@ -38,6 +38,20 @@ export default function CursoAsistenciasHoy() {
           </View>
         ))}
       </View>
+      <View style={styles.buttonsView}>
+        <Pressable
+          style={[styles.button, styles.bottomButtons]}
+          onPress={onPress}
+        >
+          <Text style={styles.textButton}>Cancelar</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.button, styles.bottomButtons, styles.saveButton]}
+          onPress={onPress}
+        >
+          <Text style={[styles.textButton, styles.saveText]}>Guardar</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -98,5 +112,17 @@ const styles = StyleSheet.create({
     color: primaryColor,
     fontSize: 20,
     lineHeight: 20,
+  },
+  bottomButtons: {
+    paddingHorizontal: 30,
+    paddingVertical: 15,
+    marginTop: 5,
+    marginHorizontal: 5,
+  },
+  saveButton: {
+    backgroundColor: primaryColor,
+  },
+  saveText: {
+    color: "white",
   },
 });
