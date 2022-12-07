@@ -37,7 +37,7 @@ export default function CursoEdit() {
           ))}
         </View>
         <View style={styles.buttonsView}>
-          <Pressable style={styles.button} onPress={() => navigate("/")}>
+          <Pressable style={styles.button} onPress={() => navigate("/home")}>
             <Text style={styles.textButton}>Go Home</Text>
           </Pressable>
           <Pressable style={styles.button} onPress={onPress}>

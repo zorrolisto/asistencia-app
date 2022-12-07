@@ -2,13 +2,16 @@ import { useState } from "react";
 import { TextInput, View, Text, StyleSheet } from "react-native";
 import { grayColor, primaryColor, textColor } from "../constants/style";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-native";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
 
   const ingresarACuenta = () => {
     console.log("hola mundo");
+    navigate("/home");
   };
 
   return (

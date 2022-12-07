@@ -134,7 +134,7 @@ export default function CursoAsistenciasRecord() {
       <View style={styles.buttonsView}>
         <Pressable
           style={[styles.button, styles.bottomButtons]}
-          onPress={() => navigate("/")}
+          onPress={() => navigate("/home")}
         >
           <Text style={styles.textButton}>Regresar</Text>
         </Pressable>

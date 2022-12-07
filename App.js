@@ -13,8 +13,8 @@ export default function App() {
       <SafeAreaView>
         <View style={styles.container}>
           <Routes>
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Login />} />
+            <Route exact path="/home" element={<Home />} />
             <Route exact path="/curso/edit" element={<CursoEdit />} />
             <Route
               exact
@@ -31,10 +31,10 @@ export default function App() {
           {/*<Route path="/about" component={About} />
           <Route path="/topics" component={Topics} />
           <View style={styles.nav}>
-            <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
+            <Link to="/home" underlayColor="#f0f4f7" style={styles.navItem}>
               <Text>Home</Text>
             </Link>
-            <Link to="/login" underlayColor="#f0f4f7" style={styles.navItem}>
+            <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
               <Text>About</Text>
             </Link>
             <Link

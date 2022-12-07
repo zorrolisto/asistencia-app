@@ -12,7 +12,7 @@ export default function CursoEdit() {
   const navigate = useNavigate();
   const curso = courses[0];
   const onPress = () => {
-    navigate("/");
+    navigate("/home");
   };
   return (
     <View style={styles.container}>
