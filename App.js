@@ -1,5 +1,5 @@
-import { SafeAreaView, StyleSheet, View } from "react-native";
-import { NativeRouter, Routes, Route } from "react-router-native";
+import { SafeAreaView, Text, StyleSheet, View } from "react-native";
+import { NativeRouter, Routes, Route, Link } from "react-router-native";
 import Login from "./src/Login.js";
 import Home from "./src/Home.js";
 import CursoAsistenciasHoy from "./src/CursoAsistenciasHoy";
@@ -14,9 +14,13 @@ export default function App() {
         <View style={styles.container}>
           <Routes>
             <Route exact path="/login" element={<Login />} />
-            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route exact path="/curso/edit" element={<CursoEdit />} />
-            <Route exact path="/" element={<CursoAsistenciasHoy />} />
+            <Route
+              exact
+              path="/curso/asistencias"
+              element={<CursoAsistenciasHoy />}
+            />
             <Route
               exact
               path="/curso/asistencias/record"
@@ -26,17 +30,21 @@ export default function App() {
           </Routes>
           {/*<Route path="/about" component={About} />
           <Route path="/topics" component={Topics} />
-        <View style={styles.nav}>
-          <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text>Home</Text>
-          </Link>
-          <Link to="/about" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text>About</Text>
-          </Link>
-          <Link to="/topics" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text>Topics</Text>
-          </Link>
-        </View>*/}
+          <View style={styles.nav}>
+            <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
+              <Text>Home</Text>
+            </Link>
+            <Link to="/login" underlayColor="#f0f4f7" style={styles.navItem}>
+              <Text>About</Text>
+            </Link>
+            <Link
+              to="/curso/edit"
+              underlayColor="#f0f4f7"
+              style={styles.navItem}
+            >
+              <Text>Topics</Text>
+            </Link>
+          </View>*/}
         </View>
       </SafeAreaView>
     </NativeRouter>

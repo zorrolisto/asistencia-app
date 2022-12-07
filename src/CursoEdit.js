@@ -1,4 +1,5 @@
 import { Pressable, TextInput, Text, StyleSheet, View } from "react-native";
+import { useNavigate } from "react-router-native";
 import { courses } from "../constants/dataMock";
 import {
   grayColor,
@@ -8,8 +9,11 @@ import {
 } from "../constants/style";
 
 export default function CursoEdit() {
+  const navigate = useNavigate();
   const curso = courses[0];
-  const onPress = () => {};
+  const onPress = () => {
+    navigate("/");
+  };
   return (
     <View style={styles.container}>
       <View style={styles.headerView}>

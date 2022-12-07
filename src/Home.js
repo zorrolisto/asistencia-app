@@ -1,11 +1,15 @@
 import { StyleSheet, View, Text } from "react-native";
+// import CookieManager from "@react-native-cookies/cookies";
 import Button from "../components/Button";
 import { courses } from "../constants/dataMock";
 import { grayColor, primaryColor, textColor } from "../constants/style";
+import { useNavigate } from "react-router-native";
 
 export default function Home() {
+  const navigate = useNavigate();
   const goToAlumnos = () => {
     console.log("go to alumnos");
+    navigate("/alumnos/add");
   };
   return (
     <View style={styles.container}>
@@ -29,9 +33,21 @@ export default function Home() {
               </View>
             </View>
             <View style={styles.buttonsView}>
-              <Button onPress={() => {}} iconOnly icon="pencil" />
-              <Button onPress={() => {}} iconOnly icon="list" />
-              <Button onPress={() => {}} iconOnly icon="arrow-right" />
+              <Button
+                onPress={() => navigate("/curso/edit")}
+                iconOnly
+                icon="pencil"
+              />
+              <Button
+                onPress={() => navigate("/curso/asistencias/record")}
+                iconOnly
+                icon="list"
+              />
+              <Button
+                onPress={() => navigate("/curso/asistencias")}
+                iconOnly
+                icon="arrow-right"
+              />
             </View>
           </View>
         ))}

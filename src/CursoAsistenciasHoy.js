@@ -1,13 +1,10 @@
-import { Pressable, TextInput, Text, StyleSheet, View } from "react-native";
+import { Pressable, Text, StyleSheet, View } from "react-native";
+import { useNavigate } from "react-router-native";
 import { courses } from "../constants/dataMock";
-import {
-  grayColor,
-  primaryColor,
-  redColor,
-  textColor,
-} from "../constants/style";
+import { grayColor, primaryColor, textColor } from "../constants/style";
 
 export default function CursoAsistenciasHoy() {
+  const navigate = useNavigate();
   const curso = courses[0];
   const onPress = () => {};
   return (
@@ -41,13 +38,13 @@ export default function CursoAsistenciasHoy() {
       <View style={styles.buttonsView}>
         <Pressable
           style={[styles.button, styles.bottomButtons]}
-          onPress={onPress}
+          onPress={() => navigate("/")}
         >
           <Text style={styles.textButton}>Cancelar</Text>
         </Pressable>
         <Pressable
           style={[styles.button, styles.bottomButtons, styles.saveButton]}
-          onPress={onPress}
+          onPress={() => navigate("/")}
         >
           <Text style={[styles.textButton, styles.saveText]}>Guardar</Text>
         </Pressable>
